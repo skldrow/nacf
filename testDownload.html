@@ -1,13 +1,19 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8"/>
-  <title></title>
+ 	<meta charset="utf-8"/>
+ 	<meta name = "viewport" content = "width = device-width"/>
+  	<title></title>
 	<script type="text/javascript"> 
 		function callJavascriptFromObjectiveC() { 
 			alert('called javascript function by objective-c'); 
 		} 
+		function callObjectiveCFromJavascript(){
+               		//window.location="jscall://callObjectiveCFromJavascript";
+  	      	}
 	</script>
+	
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
   <link rel="stylesheet" href=""/>
@@ -24,6 +30,11 @@
 	</br></br>
 	<a href="itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/5j8j6f2i2q5jg4y/test.plist">test3</a>
 	</br></br>
+
+	<div id="container">     
+            <h3>Call Objective-C from Javascript</h3>
+            <button onclick="callObjectiveCFromJavascript();">Call Objective-C</button>
+	</div>
 </body>
 
 </html>
