@@ -6,12 +6,16 @@
     <script type="text/javascript"> 
       function callJavascriptFromObjectiveC() { 
         alert('called javascript function by objective-c'); 
-        } 
+      } 
+      function callObjectiveCFromJavascript(){
+        window.location="jscall://callObjectiveCFromJavascript";
+      }
     </script> 
    </head> 
    <body>
     <div id="container"> 
       <h3>Call Javascript from Objective-C</h3> 
+      <button onclick="callObjectiveCFromJavascript();">Call Objective-C</button>
      </div> 
    </body> 
 </html>
