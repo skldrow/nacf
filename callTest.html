@@ -10,7 +10,7 @@
       function callMessageCallHandlerFromJavascript(){
         //window.location="jscall://callObjectiveCFromJavascript";
         try{
-          webkit.messageHandlers.callbackHandler.postMessage("call native test");
+          webkit.messageHandlers.callbackHandler.postMessage("callbackHandler test");
         }catch(e){
           alert(e);
         }
@@ -19,7 +19,7 @@
       function callLoginHandlerFromJavascript(){
         //window.location="jscall://callObjectiveCFromJavascript";
         try{
-          webkit.messageHandlers.loginHandler.postMessage("call native test");
+          webkit.messageHandlers.loginHandler.postMessage("loginHandler test");
         }catch(e){
           alert(e);
         }
@@ -28,7 +28,7 @@
       function callExitHandlerFromJavascript(){
         //window.location="jscall://callObjectiveCFromJavascript";
         try{
-          webkit.messageHandlers.exitHandler.postMessage("call native test");
+          webkit.messageHandlers.exitHandler.postMessage("exitHandler test");
         }catch(e){
           alert(e);
         }
@@ -37,7 +37,7 @@
       function callAlertListHandlerFromJavascript(){
         //window.location="jscall://callObjectiveCFromJavascript";
         try{
-          webkit.messageHandlers.alertListHandler.postMessage("call native test");
+          webkit.messageHandlers.alertListHandler.postMessage("alertListHandler test");
         }catch(e){
           alert(e);
         }
