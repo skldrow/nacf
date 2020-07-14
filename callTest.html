@@ -8,7 +8,6 @@
         alert('called javascript function by objective-c'); 
       } 
       function callMessageCallHandlerFromJavascript(){
-        //window.location="jscall://callObjectiveCFromJavascript";
         try{
           webkit.messageHandlers.callbackHandler.postMessage("callbackHandler test");
         }catch(e){
@@ -17,7 +16,6 @@
       }
       
       function callLoginHandlerFromJavascript(){
-        //window.location="jscall://callObjectiveCFromJavascript";
         try{
           webkit.messageHandlers.loginHandler.postMessage("loginHandler test");
         }catch(e){
@@ -26,7 +24,6 @@
       }
       
       function callExitHandlerFromJavascript(){
-        //window.location="jscall://callObjectiveCFromJavascript";
         try{
           webkit.messageHandlers.exitHandler.postMessage("exitHandler test");
         }catch(e){
@@ -35,9 +32,16 @@
       }
       
       function callAlertListHandlerFromJavascript(){
-        //window.location="jscall://callObjectiveCFromJavascript";
         try{
           webkit.messageHandlers.alertListHandler.postMessage("alertListHandler test");
+        }catch(e){
+          alert(e);
+        }
+      }
+      
+      function callSearchFileHandlerFromJavascript(){
+        try{
+          webkit.messageHandlers.searchFileHandler.postMessage("searchFileHandler test");
         }catch(e){
           alert(e);
         }
@@ -52,6 +56,7 @@
       <button onclick="callLoginHandlerFromJavascript();">Login Handler</button>
       <button onclick="callExitHandlerFromJavascript();">Exit Handler</button>
       <button onclick="callAlertListHandlerFromJavascript();">Alert List Handler</button>
+      <button onclick="callSearchFileHandlerFromJavascript();">Search File Handler</button>
      </div> 
    </body> 
 </html>
