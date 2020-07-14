@@ -7,7 +7,7 @@
       function callJavascriptFromObjectiveC() { 
         alert('called javascript function by objective-c'); 
       } 
-      function callObjectiveCFromJavascript(){
+      function callMessageCallHandlerFromJavascript(){
         //window.location="jscall://callObjectiveCFromJavascript";
         try{
           webkit.messageHandlers.callbackHandler.postMessage("call native test");
@@ -15,12 +15,43 @@
           alert(e);
         }
       }
+      
+      function callLoginHandlerFromJavascript(){
+        //window.location="jscall://callObjectiveCFromJavascript";
+        try{
+          webkit.messageHandlers.loginHandler.postMessage("call native test");
+        }catch(e){
+          alert(e);
+        }
+      }
+      
+      function callExitHandlerFromJavascript(){
+        //window.location="jscall://callObjectiveCFromJavascript";
+        try{
+          webkit.messageHandlers.exitHandler.postMessage("call native test");
+        }catch(e){
+          alert(e);
+        }
+      }
+      
+      function callAlertListHandlerFromJavascript(){
+        //window.location="jscall://callObjectiveCFromJavascript";
+        try{
+          webkit.messageHandlers.alertListHandler.postMessage("call native test");
+        }catch(e){
+          alert(e);
+        }
+      }
+      
     </script> 
    </head> 
    <body>
     <div id="container"> 
       <h3>Call Objective-C from javascript</h3> 
-      <button onclick="callObjectiveCFromJavascript();">Call Objective-C</button>
+      <button onclick="callMessageCallHandlerFromJavascript();">Message Call Handler</button>
+      <button onclick="callLoginHandlerFromJavascript();">Login Handler</button>
+      <button onclick="callExitHandlerFromJavascript();">Exit Handler</button>
+      <button onclick="callAlertListHandlerFromJavascript();">Alert List Handler</button>
      </div> 
    </body> 
 </html>
