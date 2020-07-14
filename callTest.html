@@ -8,7 +8,12 @@
         alert('called javascript function by objective-c'); 
       } 
       function callObjectiveCFromJavascript(){
-        window.location="jscall://callObjectiveCFromJavascript";
+        //window.location="jscall://callObjectiveCFromJavascript";
+        try{
+          webkit.messageHandlers.callbackHandler.postMessage("call native test");
+        }catch(e){
+          alert(e);
+        }
       }
     </script> 
    </head> 
