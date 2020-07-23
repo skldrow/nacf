@@ -2,61 +2,235 @@
   <head>
   <meta charset="utf-8"/> 
   <meta name = "viewport" content = "width = device-width"/> 
+
+
+
   <title>Hybrid App</title> 
+
+
+
     <script type="text/javascript"> 
+
+
+
       function callJavascriptFromObjectiveC() { 
-        alert('called javascript function by objective-c'); 
+
+
+
+        alert('네이티브에서 호출한 자바스크립트 메세지 함수 입니다. '); 
+
+
+
       } 
+
+
+
       function callMessageCallHandlerFromJavascript(){
+
+
+
         try{
+
+
+
           webkit.messageHandlers.callbackHandler.postMessage("callbackHandler test");
+
+
+
         }catch(e){
+
+
+
           alert(e);
+
+
+
         }
+
+
+
       }
+
+
+
       
+
+
+
       function callLoginHandlerFromJavascript(){
+
+
+
         try{
+
+
+
           webkit.messageHandlers.loginHandler.postMessage("loginHandler test");
+
+
+
         }catch(e){
+
+
+
           alert(e);
+
+
+
         }
+
+
+
       }
+
+
+
       
+
+
+
       function callExitHandlerFromJavascript(){
+
+
+
         try{
+
+
+
           webkit.messageHandlers.exitHandler.postMessage("exitHandler test");
+
+
+
         }catch(e){
+
+
+
           alert(e);
+
+
+
         }
+
+
+
       }
+
+
+
       
+
+
+
       function callAlertListHandlerFromJavascript(){
+
+
+
         try{
+
+
+
           webkit.messageHandlers.alertListHandler.postMessage("alertListHandler test");
+
+
+
         }catch(e){
+
+
+
           alert(e);
+
+
+
         }
+
+
+
       }
+
+
+
       
+
+
+
       function callSearchFileHandlerFromJavascript(){
+
+
+
         try{
+
+
+
           webkit.messageHandlers.searchFileHandler.postMessage("searchFileHandler test");
+
+
+
         }catch(e){
+
+
+
           alert(e);
+
+
+
         }
+
+
+
       }
+
+
+
       
+
+
+
     </script> 
+
+
+
    </head> 
+
+
+
    <body>
+
+
+
     <div id="container"> 
+
+
+
       <h3>Call Objective-C from javascript</h3> 
-      <button onclick="callMessageCallHandlerFromJavascript();">Message Call Handler</button></br></br>
-      <button onclick="callLoginHandlerFromJavascript();">Login Handler</button></br></br>
-      <button onclick="callExitHandlerFromJavascript();">Exit Handler</button></br></br>
-      <button onclick="callAlertListHandlerFromJavascript();">Alert List Handler</button></br></br>
-      <button onclick="callSearchFileHandlerFromJavascript();">Search File Handler</button></br></br>
+
+
+
+      <button onclick="callMessageCallHandlerFromJavascript();">자바스크립에서 호출한 네이티브 메세지 함수 입니다.</button></br></br>
+
+
+
+      <button onclick="callLoginHandlerFromJavascript();">로그인</button></br></br>
+
+
+
+      <button onclick="callExitHandlerFromJavascript();">종료</button></br></br>
+
+
+
+      <button onclick="callAlertListHandlerFromJavascript();">PUSH 알림 목록 </button></br></br>
+
+
+
+      <button onclick="callSearchFileHandlerFromJavascript();">파일전송</button></br></br>
+
+
+
      </div> 
+
+
+
    </body> 
+
+
+
 </html>
